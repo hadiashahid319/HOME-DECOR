@@ -19,7 +19,7 @@ function GallerySection() {
         OUR COLLECTION
       </h2>
 
-      {/* Images in flex row */}
+   
       <div
         className="d-flex justify-content-center align-items-start flex-wrap"
         style={{ gap: "20px",  width:"100%"}}
