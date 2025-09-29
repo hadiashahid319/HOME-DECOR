@@ -1,21 +1,22 @@
-import { useState } from "react";
-function Cart() {
+import React from "react";
 
-  const [quantity, setQuantity] = useState(1);
-
-  const handleIncrease = () => {
-    setQuantity(quantity + 1);
-  }
-
-  const handleDecrease = () => {
-    setQuantity(quantity - 1);
-  }
+function Cart({ cart }) {
   return (
-    <>
-      <button onClick={handleIncrease} style={{border:"2px solid black"}}>+</button>
-      <p style={{border:"2px solid black"}}>{quantity} </p>
-      <button onClick={handleDecrease} style={{border:"2px solid black"}}>-</button>
-    </>
+    <div className="mt-5">
+          <h3 className="text-center">🛍 Your Cart</h3>
+          {cart.length === 0 ? (
+            <p className="text-center">Cart is empty</p>
+          ) : (
+            <ul className="list-group">
+              {cart.map((item, i) => (
+                <li key={i} className="list-group-item d-flex justify-content-between">
+                  <span>{item.name}</span>
+                  <span>{item.price}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
   );
 }
 

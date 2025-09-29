@@ -1,37 +1,60 @@
-function Navbar() {
+import React, { useState } from "react";
+import Cart from "./Cart";
+
+function Navbar({ cartItems, removeFromCart, increaseQty, decreaseQty }) {
+  const [cartOpen, setCartOpen] = useState(false);
+
   return (
-    <header>
-      {/* Top Row */}
-      <div className="d-flex justify-content-between align-items-center px-4 py-2 border-bottom" style={{background:"#bc8d57ff"}}>
-        {/* Search Icon */}
-        <i className="bi bi-search fs-5"></i>
+    <nav
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        padding: "10px 20px",
+        background: "#bc8d57",
+        position: "relative", // zaroori hai cart ko anchor karne ke liye
+      }}
+    >
+      {/* Logo */}
+      <h2>NOVALIE</h2>
 
-        {/* Logo */}
-        <h1
-          className="m-0"
-          style={{ fontFamily: "serif", letterSpacing: "5px" }}
-        >
-          NOVALIE
-        </h1>
-
-        {/* Social Icons */}
-        <div className="d-flex gap-3 fs-5">
-          <i className="bi bi-twitter"></i>
-          <i className="bi bi-facebook"></i>
-          <i className="bi bi-instagram"></i>
-          <i className="bi bi-bag"></i>
-        </div>
+      {/* Links */}
+      <div>
+        <a href="/">Home</a> | <a href="/about">About</a> | <a href="/contact">Contact</a>
       </div>
 
-      {/* Bottom Row - Navigation Links */}
-      <nav className="d-flex justify-content-center gap-4 py-2 border-bottom"  style={{background:"#bc8d57ff"}}>
-        <a href="#" className="text-dark text-decoration-none">Home</a>
-        <a href="#" className="text-dark text-decoration-none">Shop</a>
-        <a href="#" className="text-dark text-decoration-none">Blog</a>
-        <a href="#" className="text-dark text-decoration-none">About</a>
-        <a href="#" className="text-dark text-decoration-none">Contact</a>
-      </nav>
-    </header>
+      {/* Cart Icon */}
+      <div style={{ position: "relative" }}>
+        <button
+          onClick={() => setCartOpen(!cartOpen)}
+          style={{
+            background: "transparent",
+            border: "none",
+            fontSize: "18px",
+            cursor: "pointer",
+          }}
+        >
+          🛒 Cart ({cartItems.length})
+        </button>
+        {{if (cartOpen) {
+            <Cart
+            cartItems={cartItems}
+            removeFromCart={removeFromCart}
+            increaseQty={increaseQty}
+            decreaseQty={decreaseQty}
+          />
+        }}}
+        {/* Dropdown Cart */}
+        {cartOpen && (
+          <Cart
+            cartItems={cartItems}
+            removeFromCart={removeFromCart}
+            increaseQty={increaseQty}
+            decreaseQty={decreaseQty}
+          />
+        )}
+      </div>
+    </nav>
   );
 }
 

@@ -1,69 +1,62 @@
-
 import ABOUT from "./assets/HOM/banner.jpg";
+
 function Banner() {
   return (
-    <section
-      id="about"
-      className="py-0"
-      style={{ backgroundColor: "#dcae7aff" }} // Dull Tea Pink
-    >
+    <section style={{ backgroundColor: "#dcae7aff" }} className="py-4">
       <div className="container-fluid">
-        {/* One Row with Two Columns */}
-        <div className="row align-items-center">
-            {/* RIGHT COLUMN (Image) */}
-          <div className="col-md-6 text-center">
-            <img
-              src={ABOUT}
-              alt="Weaver"
-              className="img-fluid rounded shadow"
-              style={{
-                maxHeight: "400px",
-                objectFit: "cover",
-                border: "5px solid #dcae7aff",
-                width:"100%",
-              }}
-            />
-          </div>
-          
-          {/* LEFT COLUMN (Text) */}
-          <div className="col-md-6">
+        <div className="row align-items-center flex-column-reverse flex-md-row">
+          <div className="col-12 col-md-6 text-center text-md-start mb-4 mb-md-0">
             <h2
-              className="fw-bold mb-4"
+              className="fw-bold mb-3"
               style={{
                 fontFamily: "'Playfair Display', serif",
-                fontSize: "2.8rem",
+                fontSize: "clamp(1.5rem, 2.5vw, 2.5rem)",
                 color: "#51310dff",
               }}
             >
-              About Us
+              NOVALIE BRAND
             </h2>
             <p
-              className="mb-4"
+              className="mb-3 px-2"
               style={{
                 fontFamily: "'Merriweather', serif",
-                fontSize: "1.2rem",
-                lineHeight: "1.8",
-                color:"#0b0a0aff",
+                fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)",
+                lineHeight: "1.6",
+                color: "#0b0a0aff",
               }}
             >
-              "Redefine your home with timeless decor <br />and modern elegance.
-                Creating beautiful spaces that<br /> reflect your style and story."
+              "Redefine your home with timeless decor <br />
+              and modern elegance. Creating beautiful spaces that <br />
+              reflect your style and story."
             </p>
             <button
-              className="btn px-5 py-2 fw-semibold shadow"
+              className="btn px-4 py-2 fw-semibold shadow mt-2"
               style={{
                 backgroundColor: "#744c1eff",
                 color: "white",
                 borderRadius: "30px",
-                border: "5px solid #744c1eff",
+                border: "3px solid #744c1eff",
                 transition: "all 0.3s ease",
+                fontSize: "clamp(0.85rem, 1vw, 1rem)",
               }}
             >
               SHOP NOW
             </button>
           </div>
 
-          
+          <div className="col-12 col-md-6 text-center mb-4 mb-md-0">
+            <img
+              src={ABOUT}
+              alt="Weaver"
+              className="img-fluid rounded shadow"
+              style={{
+                maxHeight: "400px",
+                width: "100%",
+                objectFit: "cover",
+                border: "5px solid #dcae7aff",
+              }}
+            />
+          </div>
         </div>
       </div>
     </section>

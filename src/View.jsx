@@ -1,5 +1,5 @@
-
 import ABOUT from "./assets/HOM/decor.jpg";
+
 function View() {
   return (
     <section
@@ -8,55 +8,59 @@ function View() {
       style={{ backgroundColor: "#dcae7aff" }} // Dull Tea Pink
     >
       <div className="container-fluid">
-        {/* One Row with Two Columns */}
-        <div className="row align-items-center">
+        <div className="row align-items-center flex-column-reverse flex-md-row">
           
-          {/* LEFT COLUMN (Text) */}
-          <div className="col-md-6">
+          {/* LEFT COLUMN (Text + Button) */}
+          <div className="col-12 col-md-6 text-center text-md-start">
             <h2
-              className="fw-bold mb-4"
+              className="fw-bold mb-3"
               style={{
                 fontFamily: "'Playfair Display', serif",
-                fontSize: "2.8rem",
+                fontSize: "clamp(1.8rem, 3vw, 2.8rem)",
                 color: "#3e2304ff",
               }}
             >
               About Us
             </h2>
             <p
-              className="mb-4"
+              className="mb-3 px-2"
               style={{
                 fontFamily: "'Merriweather', serif",
-                fontSize: "1.2rem", width:"70%", paddingLeft:"20%",
+                fontSize: "clamp(0.95rem, 1.2vw, 1.2rem)",
                 lineHeight: "1.8",
                 color: "#151413ff",
               }}
             >
-             At  NOVALIE, we believe every corner deserve a touch <br />of beauty. our curated decor blends timeless <br />style with modern charm to create space <br />
-              you'll love coming home to.
+              At NOVALIE, we believe every corner deserves a touch of beauty.
+              Our curated décor blends timeless style with modern charm to create
+              spaces you’ll love coming home to.
             </p>
+
+            {/* Static Button */}
             <button
-              className="btn px-5 py-2 fw-semibold shadow"
+              className="btn px-4 py-2 fw-semibold shadow mt-2"
               style={{
                 backgroundColor: "#744c1eff",
                 color: "white",
-                borderRadius: "30px", width:"70",
-                border: "5px solid #825613ff",
+                borderRadius: "30px",
+                border: "3px solid #825613ff",
                 transition: "all 0.3s ease",
+                fontSize: "clamp(0.9rem, 1vw, 1rem)",
               }}
             >
-              Learn More
+              LEARN MORE
             </button>
           </div>
 
           {/* RIGHT COLUMN (Image) */}
-          <div className="col-md-6 text-center">
+          <div className="col-12 col-md-6 text-center mb-4 mb-md-0">
             <img
               src={ABOUT}
-              alt="Weaver"
+              alt="About"
               className="img-fluid rounded shadow"
               style={{
-                maxHeight: "400px", width:"70%",
+                maxHeight: "400px",
+                width: "80%",
                 objectFit: "cover",
                 border: "5px solid #e0dadaff",
               }}

@@ -1,52 +1,79 @@
-import one from "./assets/HOM/mirror.jpg";
-import two from "./assets/HOM/candle.jpg";
-import three from "./assets/HOM/view.jpg";
-import four from "./assets/HOM/2.jpg";
-import five from "./assets/HOM/3.jpg";
-import six from "./assets/HOM/4.jpg";
-import sev from "./assets/HOM/6.jpg";
-import eig from "./assets/HOM/7.jpg";
-import nim from "./assets/HOM/one.jpg";
+import PIC from "./assets/HOM/mirror1.jpg";
+import second from "./assets/HOM/5.jpg";
+import third from "./assets/HOM/vase.jpg";
+import fourth from "./assets/HOM/2.jpg";
 
-function MostSaledItem() {
-  // Array of images with name
+function GallerySection() {
+  // 9 items
   const items = [
-    { src: one, name: "MIRROR" },
-    { src: two, name: "CANDLE" },
-    { src: three, name: "VASE" },
-    { src: four, name: "FRAME" },
-    { src: five, name: "VASE" },
-    { src: six, name: "POTS" },
-    { src: sev, name: "POTS" },
-    { src: eig, name: "DECOR" },
-    { src: nim, name: "VASE" },
+    { src: PIC, name: "MIRRORS", price: "Rs. 1500" },
+    { src: second, name: "CANDLES", price: "Rs. 800" },
+    { src: third, name: "VASES", price: "Rs. 1200" },
+    { src: fourth, name: "FRAMES", price: "Rs. 1000" },
+    { src: PIC, name: "MIRRORS", price: "Rs. 1500" },
+    { src: second, name: "CANDLES", price: "Rs. 800" },
+    { src: third, name: "VASES", price: "Rs. 1200" },
+    { src: PIC, name: "MIRRORS", price: "Rs. 1500" },
+    { src: second, name: "CANDLES", price: "Rs. 800" },
   ];
 
   return (
-    <div className="container py-5">
-      {/* Title */}
-      <h2 className="text-center mb-4" style={{ fontFamily: "serif" }}>
-        MOST SALED ITEMS
-      </h2>
+    <section id="gallery">
+      <div className="container py-5" style={{ background: "#F5F2ED" }}>
+        {/* Title */}
+        <h2 className="text-center mb-4" style={{ fontFamily: "serif" }}>
+          MOST SOLD ITEMS
+        </h2>
 
-      {/* Bootstrap Grid */}
-      <div className="row">
-        {items.map((item, index) => (
-          <div key={index} className="col-md-4 mb-4 d-flex justify-content-center">
-            <div style={{ width: "200px" }}>
-              <img
-                src={item.src}
-                alt={item.name}
-                className="img-fluid rounded"
-                style={{ width: "200px", height: "220px", objectFit: "cover" }}
-              />
-              <p className="mt-2 text-center">{item.name}</p>
+        {/* Responsive Grid */}
+        <div className="row g-4 justify-content-center">
+          {items.map((item, index) => (
+            <div
+              key={index}
+              className="col-12 col-sm-6 col-md-4 d-flex justify-content-center"
+            >
+              <div
+                style={{
+                  width: "220px",
+                  background: "white",
+                  borderRadius: "10px",
+                  boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+                  textAlign: "center",
+                  paddingBottom: "15px",
+                }}
+              >
+                <img
+                  src={item.src}
+                  alt={item.name}
+                  style={{
+                    width: "100%",
+                    height: "200px",
+                    objectFit: "cover",
+                    borderTopLeftRadius: "10px",
+                    borderTopRightRadius: "10px",
+                  }}
+                />
+                <p className="mt-2 fw-bold">{item.name}</p>
+                <p className="text-success">{item.price}</p>
+                <button
+                  style={{
+                    background: "#5b0202",
+                    color: "white",
+                    border: "none",
+                    borderRadius: "5px",
+                    padding: "6px 12px",
+                    cursor: "pointer",
+                  }}
+                >
+                  🛒 Add to Cart
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 
-export default MostSaledItem;
+export default GallerySection;
