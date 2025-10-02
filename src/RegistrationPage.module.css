@@ -1,0 +1,87 @@
+.registration_container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  min-height: 100vh;       
+  background: rgb(132, 93, 49);
+  padding: 100px;         
+}
+
+.registration_form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 650px;
+  min-height: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+
+.form_title {
+  text-align: center;
+  font-weight: bold;
+  color:rgb(16, 16, 16);
+  margin-bottom: 1rem;
+}
+
+.form_row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form_col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.full {
+  flex: 1 1 100%;
+}
+
+label {
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  color: rgb(19, 19, 18);
+}
+
+input,
+select {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid#bc8d57ff;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+  border-color: #bc8d57ff;
+  box-shadow: 0 0 5px rgba(5, 77, 28, 0.5); 
+  outline: none;
+}
+
+.checkbox_row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.submit_btn {
+  width: 100%;
+  background-color: rgb(132, 93, 49);
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.submit_btn:hover {
+  background-color: #bc8d57ff;
+}

@@ -25,11 +25,11 @@ function GallerySection() {
               className="col-12 col-sm-6 col-md-4 col-lg-3 text-center"
             >
              <img
-  src={item.src}
-  alt={item.name}
-  className="img-fluid rounded"
-  style={{ height: "250px", objectFit: "cover" }} // 👈 200 → 250
-/>
+                src={item.src}
+                alt={item.name}
+                className="img-fluid rounded"
+                style={{ height: "250px", objectFit: "cover" }} 
+               />
               <p className="mt-2 fw-bold">{item.name}</p>
             </div>
           ))}

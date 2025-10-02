@@ -5,40 +5,39 @@ function Bar() {
     <header>
       {/* Top Row */}
       <div
-        className="d-flex flex-wrap justify-content-between align-items-center py-2 px-3 border-bottom"
+        className="d-flex flex-wrap justify-content-between align-items-center px-3 py-2 border-bottom"
         style={{ background: "#bc8d57ff" }}
       >
         {/* Search Box */}
-        <div className="d-flex align-items-center flex-grow-1 flex-md-grow-0 mb-2 mb-md-0 order-2 order-md-0">
+        <div className="d-flex align-items-center order-2 order-md-1 mt-2 mt-md-0">
           <i className="bi bi-search fs-5 me-2"></i>
           <input
             type="text"
             placeholder="Search..."
             className="form-control"
             style={{
-              maxWidth: "200px",
+              maxWidth: "160px",
               borderRadius: "20px",
               fontSize: "0.9rem",
             }}
           />
         </div>
 
-        {/* Logo */}
+        {/* Logo / Title */}
         <h1
-          className="m-0 text-center flex-grow-1 order-1"
+          className="m-0 text-center order-1 flex-grow-1"
           style={{
             fontFamily: "serif",
             letterSpacing: "5px",
             fontSize: "clamp(1.2rem, 4vw, 2rem)",
             cursor: "pointer",
-            paddingRight:"23%"
           }}
         >
           NOVALIE
         </h1>
 
         {/* Right Side Icons + Cart */}
-        <div className="d-flex justify-content-center justify-content-md-end gap-3 fs-5 align-items-center order-3 mt-2 mt-md-0 w-100 w-md-auto">
+        <div className="d-flex justify-content-center justify-content-md-end gap-3 fs-5 align-items-center order-3 mt-2 mt-md-0">
           <a href="#" className="text-dark">
             <i className="bi bi-twitter"></i>
           </a>
@@ -54,9 +53,9 @@ function Bar() {
         </div>
       </div>
 
-      {/* Navigation Links */}
+      {/* Navigation Links Row */}
       <nav
-        className="border-bottom d-flex flex-wrap justify-content-center gap-3 py-2"
+        className="border-bottom d-flex flex-wrap justify-content-center gap-4 py-2"
         style={{ background: "#bc8d57ff" }}
       >
         <a href="#" className="text-dark text-decoration-none">
@@ -67,6 +66,9 @@ function Bar() {
         </a>
         <a href="#" className="text-dark text-decoration-none">
           Blog
+        </a>
+        <a href="#" className="text-dark text-decoration-none">
+          Categories
         </a>
         <a href="#" className="text-dark text-decoration-none">
           Contact

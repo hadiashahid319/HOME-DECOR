@@ -57,7 +57,7 @@ function GallerySection() {
                 <p className="text-success">{item.price}</p>
                 <button
                   style={{
-                    background: "#5b0202",
+                    background: "#111010ff",
                     color: "white",
                     border: "none",
                     borderRadius: "5px",
