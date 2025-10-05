@@ -1,68 +1,52 @@
 import React from "react";
 import styles from "./Login.module.css"; 
-import fourth from "./assets/HOM/login.jpg";
+import sideImage from "./assets/HOM/login.jpg";
+import logo from "./assets/HOM/logo.png";
 
 function Login() {
   return (
-    <div className={styles.login_container}>
-      <div className={`row ${styles.login_layout} shadow rounded`}>
-        
-        {/* Left side form */}
-        <div className="col-md-6 d-flex flex-column justify-content-center p-4">
-          <header className="text-center mb-4">
-            <h1 className={styles.brand_name}>NOVALIE</h1>
-          </header>
+    <div className={styles.mainContainer}>
+      <div className={`${styles.loginBox} shadow-lg rounded-3 d-flex`}>
+        {/* LEFT SIDE (form) */}
+        <div className={styles.formSection}>
+          <div className="text-center mb-3">
+            <img
+              src={logo}
+              alt="logo"
+              className={styles.logo}
+            />
+          </div>
+          <h2 className="fw-bold text-center">COZY CORNER</h2>
+          <h5 className={styles.subHeading}>WELCOME BACK</h5>
 
-          <h2 className={styles.tag_bar}>WELCOME BACK</h2>
+          <label>Email</label>
+          <input
+            type="email"
+            className="form-control mb-3"
+            placeholder="Enter your email"
+          />
 
-          <form className={styles.form}>
-            {/* Email */}
-            <div className="mb-3">
-              <label htmlFor="email" className={styles.label}>Email</label>
-              <input 
-                type="email" 
-                id="email" 
-                className={styles.input} 
-                placeholder="Enter your email" 
-                required 
-              />
-            </div>
+          <label>Password</label>
+          <input
+            type="password"
+            className="form-control mb-2"
+            placeholder="Enter your password"
+          />
 
-            {/* Password */}
-            <div className="mb-3">
-              <label htmlFor="password" className={styles.label}>Password</label>
-              <input 
-                type="password" 
-                id="password" 
-                className={styles.input} 
-                placeholder="Enter your password" 
-                required 
-              />
-            </div>
+          <small className="d-block mb-2 text-end text-muted">
+            Forgot Password?
+          </small>
 
-            {/* Forgot Password */}
-            <div className="d-flex justify-content-between align-items-center mb-3">
-              <a href="#forgot" className={styles.link}>Forgot Password?</a>
-            </div>
+          <button className={styles.signInBtn}>Sign In</button>
 
-            {/* Button */}
-            <button type="submit" className={styles.submit_btn}>Sign In</button>
-
-            {/* Sign Up */}
-            <div className="text-center mt-3">
-              Don’t have an account?{" "}
-              <a href="#signup" className={styles.link_bold}>Sign Up</a>
-            </div>
-          </form>
+          <p className="text-center mt-3">
+            Don’t have an account? <a href="#">Sign Up</a>
+          </p>
         </div>
 
-        {/* Right side image */}
-        <div className="col-md-6 d-none d-md-flex justify-content-center align-items-center p-0">
-          <img
-            src={fourth}
-            alt="Decor"
-            className={`img-fluid ${styles.login_img}`}
-          />
+        {/* RIGHT SIDE (image grid) */}
+        <div className={styles.imageSection}>
+          <img src={sideImage} alt="side" className={styles.sideImage} />
         </div>
       </div>
     </div>

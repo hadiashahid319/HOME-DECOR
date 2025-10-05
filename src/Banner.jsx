@@ -2,7 +2,7 @@ import ABOUT from "./assets/HOM/banner.jpg";
 
 function Banner() {
   return (
-    <section style={{ backgroundColor: "#dcae7aff" }} className="py-4">
+    <section style={{ backgroundColor: "#E1D4C2" }} className="py-4">
       <div className="container-fluid">
         <div className="row align-items-center flex-column-reverse flex-md-row">
           <div className="col-12 col-md-6 text-center text-md-start mb-4 mb-md-0">
@@ -11,10 +11,10 @@ function Banner() {
               style={{
                 fontFamily: "'Playfair Display', serif",
                 fontSize: "clamp(1.5rem, 2.5vw, 2.5rem)",
-                color: "#51310dff",
+                color: "#291C0E", // deep wooden brown
               }}
             >
-              NOVALIE BRAND
+              COZY CORNER
             </h2>
             <p
               className="mb-3 px-2"
@@ -22,7 +22,7 @@ function Banner() {
                 fontFamily: "'Merriweather', serif",
                 fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)",
                 lineHeight: "1.6",
-                color: "#0b0a0aff",
+                color: "#6E473B", // soft muted brown
               }}
             >
               "Redefine your home with timeless decor <br />
@@ -32,13 +32,14 @@ function Banner() {
             <button
               className="btn px-4 py-2 fw-semibold shadow mt-2"
               style={{
-                backgroundColor: "#744c1eff",
+                backgroundColor: "#A78D78", // taupe
                 color: "white",
                 borderRadius: "30px",
-                border: "3px solid #744c1eff",
+                border: "3px solid #A78D78",
                 transition: "all 0.3s ease",
                 fontSize: "clamp(0.85rem, 1vw, 1rem)",
               }}
+           
             >
               SHOP NOW
             </button>
@@ -53,7 +54,7 @@ function Banner() {
                 maxHeight: "400px",
                 width: "100%",
                 objectFit: "cover",
-                border: "5px solid #dcae7aff",
+                border: "5px solid #E1D4C2", // subtle beige border
               }}
             />
           </div>

@@ -15,21 +15,15 @@ function Landing()
 { 
     return(
 <>
-
 <div className="container-fluid">
-{/* <Navbar/>
+    <RegistrationPage/>
+ {/* <Navbar/>
 <Banner/>
 <GallerySection/>
 <View/>
 <MostSaledItem/>
 <Footer/> */}
-<Login/>
-{/* <RegistrationPage/> */}
 </div>
-
-
-
-
 </>
     
     

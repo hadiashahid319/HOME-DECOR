@@ -15,13 +15,23 @@ function GallerySection() {
     { src: third, name: "VASES", price: "Rs. 1200" },
     { src: PIC, name: "MIRRORS", price: "Rs. 1500" },
     { src: second, name: "CANDLES", price: "Rs. 800" },
+    { src: third, name: "VASES", price: "Rs. 1200" },
+    { src: PIC, name: "MIRRORS", price: "Rs. 1500" },
+    { src: second, name: "CANDLES", price: "Rs. 800" },
   ];
 
   return (
-    <section id="gallery">
-      <div className="container py-5" style={{ background: "#F5F2ED" }}>
+    <section id="gallery" style={{ backgroundColor: "#f8f4ef" }}>
+      <div className="container py-5">
         {/* Title */}
-        <h2 className="text-center mb-4" style={{ fontFamily: "serif" }}>
+        <h2
+          className="text-center mb-5 fw-bold"
+          style={{
+            fontFamily: "'Playfair Display', serif",
+            color: "#51310d",
+            fontSize: "clamp(1.8rem, 2.5vw, 2.5rem)",
+          }}
+        >
           MOST SOLD ITEMS
         </h2>
 
@@ -30,18 +40,19 @@ function GallerySection() {
           {items.map((item, index) => (
             <div
               key={index}
-              className="col-12 col-sm-6 col-md-4 d-flex justify-content-center"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center"
             >
-              <div
-                style={{
-                  width: "220px",
-                  background: "white",
-                  borderRadius: "10px",
-                  boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
-                  textAlign: "center",
-                  paddingBottom: "15px",
-                }}
-              >
+             <div
+               style={{
+                width: "230px",
+                background: "white",
+                borderRadius: "15px",
+                border: "2px solid #E1D4C2", // ✅ Soft Beige Border
+                boxShadow: "0 6px 12px rgba(0,0,0,0.08)",
+                textAlign: "center",
+                transition: "transform 0.3s ease, box-shadow 0.3s ease",
+  }}
+>
                 <img
                   src={item.src}
                   alt={item.name}
@@ -49,20 +60,33 @@ function GallerySection() {
                     width: "100%",
                     height: "200px",
                     objectFit: "cover",
-                    borderTopLeftRadius: "10px",
-                    borderTopRightRadius: "10px",
+                    borderTopLeftRadius: "15px",
+                    borderTopRightRadius: "15px",
                   }}
                 />
-                <p className="mt-2 fw-bold">{item.name}</p>
-                <p className="text-success">{item.price}</p>
+                <p
+                  className="mt-3 fw-bold"
+                  style={{
+                    fontFamily: "'Merriweather', serif",
+                    fontSize: "1.1rem",
+                    color: "#2c1b0c",
+                  }}
+                >
+                  {item.name}
+                </p>
+                <p style={{ color: "#744c1e", fontWeight: "600" }}>
+                  {item.price}
+                </p>
                 <button
                   style={{
-                    background: "#111010ff",
+                    background: "#744c1e",
                     color: "white",
                     border: "none",
-                    borderRadius: "5px",
-                    padding: "6px 12px",
+                    borderRadius: "25px",
+                    padding: "8px 16px",
                     cursor: "pointer",
+                    fontWeight: "500",
+                    transition: "background 0.3s ease",
                   }}
                 >
                   🛒 Add to Cart
