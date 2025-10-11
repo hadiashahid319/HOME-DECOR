@@ -10,20 +10,26 @@ import Navbar from "./Bar";
 import ProductDetails from "./Productdetails";
 import RegistrationPage from "./Registrationpage";
 import Login from "./Login";
+import CandlesGallery from "./CandlesGallery";
+
+import Prac from "./Prac";
+import MirrorsGallery from "./MirrorsGallery";
 
 function Landing()
 { 
     return(
 <>
 <div className="container-fluid">
-    <RegistrationPage/>
- {/* <Navbar/>
+
+<Navbar/>
 <Banner/>
 <GallerySection/>
 <View/>
 <MostSaledItem/>
-<Footer/> */}
-</div>
+<Footer/>
+
+
+</div> 
 </>
     
     
