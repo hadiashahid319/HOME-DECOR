@@ -1,62 +1,25 @@
 import ABOUT from "./assets/HOM/banner.jpg";
+import styles from "./Banner.module.css"; // ✅ Import CSS Module
 
 function Banner() {
   return (
-    <section style={{ backgroundColor: "#E1D4C2" }} className="py-4">
+    <section className={styles.bannerSection}>
       <div className="container-fluid">
         <div className="row align-items-center flex-column-reverse flex-md-row">
+          {/* LEFT TEXT SIDE */}
           <div className="col-12 col-md-6 text-center text-md-start mb-4 mb-md-0">
-            <h2
-              className="fw-bold mb-3"
-              style={{
-                fontFamily: "'Playfair Display', serif",
-                fontSize: "clamp(1.5rem, 2.5vw, 2.5rem)",
-                color: "#291C0E", // deep wooden brown
-              }}
-            >
-              COZY CORNER
-            </h2>
-            <p
-              className="mb-3 px-2"
-              style={{
-                fontFamily: "'Merriweather', serif",
-                fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)",
-                lineHeight: "1.6",
-                color: "#6E473B", // soft muted brown
-              }}
-            >
+            <h2 className={styles.title}>COZY CORNER</h2>
+            <p className={styles.subtitle}>
               "Redefine your home with timeless decor <br />
               and modern elegance. Creating beautiful spaces that <br />
               reflect your style and story."
             </p>
-            <button
-              className="btn px-4 py-2 fw-semibold shadow mt-2"
-              style={{
-                backgroundColor: "#A78D78", // taupe
-                color: "white",
-                borderRadius: "30px",
-                border: "3px solid #A78D78",
-                transition: "all 0.3s ease",
-                fontSize: "clamp(0.85rem, 1vw, 1rem)",
-              }}
-           
-            >
-              SHOP NOW
-            </button>
+            <button className={styles.shopBtn}>SHOP NOW</button>
           </div>
 
+          {/* RIGHT IMAGE SIDE */}
           <div className="col-12 col-md-6 text-center mb-4 mb-md-0">
-            <img
-              src={ABOUT}
-              alt="Weaver"
-              className="img-fluid rounded shadow"
-              style={{
-                maxHeight: "400px",
-                width: "100%",
-                objectFit: "cover",
-                border: "5px solid #E1D4C2", // subtle beige border
-              }}
-            />
+            <img src={ABOUT} alt="Banner" className={styles.bannerImage} />
           </div>
         </div>
       </div>
